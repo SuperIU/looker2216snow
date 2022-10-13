@@ -28,6 +28,11 @@ view: orders_view {
     sql: ${TABLE}."ORDER_AMOUNT" ;;
   }
 
+  dimension: order_amount_string {
+    type:  string
+    sql: CONCAT('$',${TABLE}."ORDER_AMOUNT") ;;
+  }
+
   dimension: status {
     type: string
     sql: ${TABLE}."STATUS" ;;
